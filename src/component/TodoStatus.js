@@ -7,7 +7,7 @@ function TodoStatus () {
             <div className={status.section}>
                 <div className={status.left}>10개 남음</div>
                 <div className="status-filter">
-                    <button type="button" className={status.btn, status.active}>전체목록</button>
+                    <button type="button" className={status.btn}>전체목록</button>
                     <button type="button" className={status.btn}>남은목록</button>
                     <button type="button" className={status.btn}>완료목록</button>
                 </div>

@@ -61,3 +61,45 @@ https://dev.to/hariramjp777/todo-app-using-html-css-and-js-local-storage-design-
 - styled-component : 스타일링된 컴포넌트 => component별로 css로 구성
   - 인라인 방식처럼 사용 = > component 파일에 css, component contents 같이 작성
   - Internal 방식으로 랜더링 됨.
+
+## React JSX에 기능 추가
+
+- event와 함수를 연결
+  
+```
+  onclick={함수이름}
+
+  Ex) onClick={myFunction}
+```
+
+  - JSX에 반영되는 값이 업데이트되어 다시 랜더링되어야 할 때 HOOK을 사용함
+
+
+### React Hook
+
+- HOOK은 함수 컴포넌트에서 리액트의 상태와 생명주기 기능을 연동할 수 있도록 해주는 함수
+
+- useState
+
+ - 초기값으로 지정한 값을 사용해서 상태를 표현하는 값과 그 값을 설정(지정)하는 함수를 반환함
+  
+- useRef
+
+ - useRef로 할당된 객체와 해당 객체가 할당된 Element와 연결되어 Rendering된 DOM에 직접 Access 할 수 있도록 하는 함수
+
+- map
+
+ -특정 데이터를 다른 형태나 성질의 데이터로 변형하여 매핑해주는 함수
+
+### Hook을 사용해서 배열에 데이터를 추가/삭제
+- 기본 배열 데이터
+ - 최종으로 수정되는 데이터이기 때문에 기본 배열 데이터도 useState()로 상태 관리가 필요함.
+
+- 새로 입력되는 객체
+ - 새로 값이 입력될 때 useState()로 상태 관리가 필요함.
+ - 구조 분해 할당을 통해 변수를 단순한 형태의 변수를 사용
+
+- 실행 사이클의 상태 관리
+ - 기본데이터 개수 이후로 데이터가 추가될 수 있도록 useRef()로 상태 관리가 필요함.
+
+- 컴포넌트 밖의 함수와 값을 사용하기 위해 컴포넌트 속으로 전달햇거 사용하기도  함
